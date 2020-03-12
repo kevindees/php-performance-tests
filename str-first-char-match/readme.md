@@ -1,4 +1,4 @@
-A not-so-scientific `$str[0] === 'a'` position vs `strpos($str, 'a') === 0` speed test.
+A not-so-scientific `$str[0] === 'a'` vs `strpos($str, 'a') === 0` speed test.
 
 Run Commands:
 
