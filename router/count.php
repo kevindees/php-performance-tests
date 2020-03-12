@@ -32,7 +32,6 @@ $routes = [
 $range = range(1,  $n ?? 1);
 foreach ($range as $i) {
     $result = dispatch($uri ?? '/end/23', $routes);
-    // var_dump($result);
 }
 
 echo ( microtime(true) - $s) * 1000;

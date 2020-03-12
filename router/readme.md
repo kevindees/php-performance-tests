@@ -8,17 +8,27 @@ php router/regex.php bar/23 1
 php router/count.php bar/23 1
 ```
 
-### Large Set ~200 routes
+### Huge Set ~1_000_000 routes
 
-- *Regex*: `0.304ms`
-- *Count*: `0.118ms`
+- *Regex*: `3975.012ms`
+- *Count*: `5026.620ms`
+
+### Large Set ~1000 routes
+
+- *Regex*: `5.476ms`
+- *Count*: `6.074ms`
+
+### Normal Set ~500 routes
+
+- *Regex*: `2.890ms`
+- *Count*: `3.408ms`
 
 ### Small Set ~5 routes
 
-- *Regex*: `0.086ms`
-- *Count*: `0.056ms`
+- *Regex*: `0.230ms`
+- *Count*: `0.168ms`
 
-I'm testing the regex method vs. my count version. However, I'm not grouping the regex version. Regardless, these implementations do not seem to break down even with more massive sets if routes and both are high-speed. I would like to think a complied router using the regex method would significantly outpace the count version.
+I'm testing the regex method vs. a count version. However, I'm not grouping the regex version. Regardless, these implementations do not seem to break down even with more massive sets if routes and both are high-speed. I would like to think a complied router using the regex method would significantly outpace the count version.
 
 However, the Regex version has the apparent benefits of complex pattern matching.
 
