@@ -6,6 +6,7 @@ Run Commands:
 // args: int, "num times to run"
 php calls/static.php 1000 10000
 php calls/function.php 1000 10000
+php calls/ns_function.php 1000 10000
 php calls/obj.php 1000 10000
 php calls/anonymous.php 1000 10000
 ```
@@ -13,21 +14,21 @@ php calls/anonymous.php 1000 10000
 ### Huge Set ~1_000_000 calls
 
 - *Static*: `731.104ms`
-- *Function*: `612.005ms`
+- *Function*: `612.005ms` (namespace makes no difference in speed)
 - *Object*: `1295.540ms`
 - *Anonymous*: `1109.482ms`
 
 ### Large Set ~10000 calls
 
 - *Static*: `9.607ms`
-- *Function*: `8.596ms`
+- *Function*: `8.596ms` (namespace makes no difference in speed)
 - *Object*: `16.658ms`
 - *Anonymous*: `14.389ms`
 
 ### Small Set ~100 calls
 
 - *Static*: `0.200ms`
-- *Function*: `0.176ms`
+- *Function*: `0.176ms` (namespace makes no difference in speed)
 - *Object*: `0.274ms`
 - *Anonymous*: `0.333ms`
 
