@@ -23,4 +23,4 @@ php array.php a 10000
 - *Array*: `0.257ms`
 - *Pos*: `0.181ms`
 
-My conclusion is that is much better if detecting the first char.
+My conclusion is that `$str[0] === 'a'` is much better if detecting the first char.
