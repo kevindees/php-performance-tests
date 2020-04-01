@@ -4,13 +4,19 @@ $range = range(1,  $n ?? 1);
 
 $s = microtime(true);
 foreach ($range as $i) {
-    $list = [true];
+    $list = [true, null];
     $c = 0;
+
+    $list = array_filter($list);
 
     foreach ($list as $i => $v) {
         $v = $list[$i];
         unset($list[$i]);
         $c++;
+
+        if ($v === null) {
+            $c++;
+        }
     }
 }
 
