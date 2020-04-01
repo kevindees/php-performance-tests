@@ -7,8 +7,8 @@ $s = microtime(true);
 foreach ($range as $i) {
     $list = [true];
     $c = 0;
-    foreach ($list as $v) {
-        array_shift($list);
+
+    while (! is_null($segment = array_shift($list))) {
         $c++;
     }
 }
