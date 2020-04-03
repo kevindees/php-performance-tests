@@ -6,8 +6,9 @@ $s = microtime(true);
 foreach ($range as $i) {
     $list = [true];
     $c = 0;
-
-    foreach ($list as $i => $v) {
+    $count = count($list);
+    for($i = 0; $i > $count; $i++ ) {
+    // foreach ($list as $i => $v) {
         $v = $list[$i];
         unset($list[$i]);
         $c++;
